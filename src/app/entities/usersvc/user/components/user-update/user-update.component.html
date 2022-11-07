@@ -1,0 +1,68 @@
+<form
+  name="editForm"
+  role="form"
+  novalidate
+  (ngSubmit)="save()"
+  [formGroup]="editForm"
+>
+  <div class="modal-header">
+    <h5 id="event-work-heading" style="font-weight: bold">
+      Criar ou Editar um Usuário
+    </h5>
+  </div>
+
+  <div class="modal-body px-5">
+    <div class="form-group col-md-8 py-2">
+      <label class="form-control-label" for="field_name">Nome</label>
+      <input
+        id="field_name"
+        name="name"
+        formControlName="name"
+        type="text"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group col-md-8 py-2">
+      <label class="form-control-label" for="field_name">E-mail</label>
+      <input
+        id="field_email"
+        name="email"
+        formControlName="email"
+        type="email"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group col-md-8 py-2">
+      <label class="form-control-label" for="field_password">Password</label>
+      <input
+        id="field_password"
+        name="password"
+        formControlName="password"
+        type="password"
+        class="form-control"
+      />
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button
+      type="button"
+      id="cancel-save"
+      class="btn btn-secondary"
+      (click)="cancel()"
+    >
+      Cancelar
+    </button>
+
+    <button
+      type="submit"
+      id="save-entity"
+      [disabled]="editForm.invalid || isSaving"
+      class="btn btn-primary"
+    >
+      Salvar
+    </button>
+  </div>
+</form>

@@ -1,0 +1,46 @@
+<main class="card bg-transparent">
+    <section class="card-body">
+        <header class="card-header">
+            <button
+             class="btn btn-outline-success text-white fw-bolder"
+             (click)="create()"
+             >
+             + Novo Tipo de Evento
+             </button>
+        </header>
+  
+        <body class="card-body bg-transparent">
+            <table class="table text-center text-white fw-bold align-middle">
+            <caption class="text-white">
+                Lista Completa de Tipos de Evento
+            </caption>
+            <thead class="table-primary">
+                <tr>
+                <th>Id</th>
+                <th>Descrição</th>
+                <th>Ativo</th>
+                <th colspan="2"></th>
+                </tr>
+            </thead>
+    
+            <tbody class="table-group-divider">               
+                <tr *ngFor="let eventType of eventTypes">
+                <td>{{ eventType.id }}</td>
+                <td>{{ eventType.description }}</td>
+                <td>{{ eventType.isActive }}</td>
+                <td>
+                    <button (click)="update(eventType)" class="btn btn-outline-warning text-white buttons">
+                    Editar
+                    </button>
+                </td>
+                <td>
+                    <button type="submit" (click)="delete(eventType)" class="btn btn-outline-danger text-white buttons" >
+                    Excluir
+                    </button>
+                </td>
+                </tr>
+            </tbody>
+            </table>
+        </body>
+    </section>
+  </main>

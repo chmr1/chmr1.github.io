@@ -1,0 +1,33 @@
+<main class="flex coluna text-white">
+  <section class="bg-topo">
+    <div class="flex">
+      <div>
+        <img src="assets/images/logo_top_topdown.png" alt="TopDown Logotipo" />
+      </div>
+
+      <div class="flex coluna w-100 s-around">
+        <div class="flex center">
+          <h1>{{ title }}</h1>
+        </div>
+
+        <div class="flex center">
+          <p class="info">
+            {{ version }} - {{ today | date: "fullDate":"pt-br" }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-d-azul flex f-end borda">
+    <div>
+      <p id="usuario-logado">{{ loggeduser }}</p>
+    </div>
+    <div class="barraMenuBarra"></div>
+    <img
+      id="icon-sair"
+      src="assets/images/menu_barra_sair.png"
+      alt="icone de sair"
+    />
+  </section>
+</main>

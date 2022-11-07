@@ -1,0 +1,81 @@
+<main class="card bg-transparent">
+    <section class="card-body">
+        <header class="card-header">
+            <h1 class="card-title text-center text-white">Cadastro de Reunião</h1>
+        </header>
+
+        <body class="card-body bg-transparent">
+            <form [formGroup]="eventoForm" class="d-flex flex-column align-items-center">
+                <section class="d-flex flex-wrap justify-content-center">
+
+                    <div class="col-4 mx-3 my-3">
+                        <div class="form-floating">
+                            <input id="title" formControlName="title" name="title" placeholder="Titulo" type="text" class="form-control" [ngClass]="{'is-invalid': eventoForm.get('title')!.invalid }" >
+                            <label for="title"> Título </label>
+                            <div class="invalid-feedback">
+                                O evento precisa de um título
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 mx-3 my-3">
+                        <div class="form-floating">
+                            <input id="author" formControlName="author" placeholder="Titulo" type="text" class="form-control" readonly>
+                            <label for="author"> Autor </label>
+                        </div>
+                    </div>
+
+                    <div class="col-4 mx-3 my-3">
+                        <div class="form-floating">
+                            <input id="data" formControlName="date" name="date" placeholder="Titulo" type="date" class="form-control" [ngClass]="{'is-invalid': eventoForm.get('date')!.invalid }" >
+                            <label for="data"> Data </label>
+                            <div class="invalid-feedback">
+                                O evento precisa de uma data
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 mx-3 my-3">
+                        <div class="form-floating">
+                            <input id="type" formControlName="type" placeholder="Tipo" type="text" class="form-control" readonly >
+                            <label for="type"> Tipo </label>
+                        </div>
+                    </div>
+
+                    <div class="col-4 mx-3 my-3">
+                        <div class="form-floating">
+                            <input id="timeStart" formControlName="timeStart" name="timeStart" placeholder="Início" type="time" class="form-control" [ngClass]="{'is-invalid': eventoForm.get('timeStart')!.invalid }" >
+                            <label for="timeStart"> Início </label>
+                            <div class="invalid-feedback">
+                                O evento precisa de um horário inicial
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 mx-3 my-3">
+                        <div class="form-floating">
+                            <input id="timeEnd" formControlName="timeEnd" name="timeEnd" placeholder="Fim" type="time" class="form-control" [ngClass]="{'is-invalid': eventoForm.get('timeEnd')!.invalid }" >
+                            <label for="timeEnd"> Fim </label>
+                            <div class="invalid-feedback">
+                                O evento precisa de um horário final
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-8 mx-3 my-3">
+                        <div class="form-floating ">
+                            <textarea id="resumo" formControlName="content" placeholder="Resumo" class="form-control" cols="30" rows="10"></textarea>
+                            <label for="resumo"> Resumo </label>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="buttons d-flex justify-content-around">
+                    <button routerLink="/" class="btn btn-outline-warning text-white fw-bolder"> CANCELAR </button>
+                    <button (click)="salvar()" [disabled]="eventoForm.invalid" class="btn btn-outline-warning text-white fw-bolder" > SALVAR </button>
+                </section>
+            </form>       
+        </body>
+    </section>
+</main>

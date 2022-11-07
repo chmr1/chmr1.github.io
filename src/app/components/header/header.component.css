@@ -1,0 +1,68 @@
+main {
+  color: white;
+  height: max-content;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  margin: 0;
+  padding: 10px 0 0 0;
+}
+
+p {
+  margin: 0;
+  padding: 10px 0 0 0;
+}
+
+#usuario-logado {
+  padding: 10px;
+}
+
+.flex {
+  display: flex;
+}
+
+.coluna {
+  flex-direction: column;
+}
+
+.bg-topo {
+  background-image: url(src/assets/images/topo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.bg-d-azul {
+  background-color: #003963;
+}
+
+.center {
+  justify-content: center;
+}
+
+.borda {
+  border-style: solid;
+  border-width: 0 0 1px 0;
+}
+
+.f-end {
+  justify-content: flex-end;
+}
+
+.barraMenuBarra {
+  margin: 10px;
+  border-left: 1px solid #001f3b;
+  float: right;
+  background-color: #004f94;
+  width: 1px;
+  height: 20px;
+}
+
+#icon-sair {
+  height: 18px;
+  margin: 10px;
+}
